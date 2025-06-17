@@ -1,8 +1,8 @@
 {
-  "title": "Emerging ClickGrab Campaign: Advanced Analysis of 2025-06-17 Attack Patterns",
+  "title": "Critical ClickGrab Campaign: Advanced Analysis of 2025-06-17 Attack Patterns",
   "date": "2025-06-17",
   "category": "Threat Analysis",
-  "excerpt": "Comprehensive analysis of 0 sites reveals 0.0% malicious rate with 0 PowerShell attack attempts and 0 clipboard hijacking instances.",
+  "excerpt": "Comprehensive analysis of 3 sites reveals 100.0% malicious rate with 0 PowerShell attack attempts and 0 clipboard hijacking instances.",
   "slug": "clickgrab-analysis-2025-06-17",
   "tags": [
     "URL Analysis",
@@ -11,8 +11,8 @@
   ],
   "read_time": 12,
   "stats": {
-    "sites_analyzed": 0,
-    "malicious_rate": 0,
+    "sites_analyzed": 3,
+    "malicious_rate": 100,
     "attack_patterns": 0,
     "powershell_downloads": 0,
     "clipboard_manipulations": 0,
