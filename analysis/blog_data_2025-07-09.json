@@ -1,0 +1,49 @@
+{
+  "title": "Emerging ClickGrab Campaign: Advanced Analysis of 2025-07-09 Attack Patterns",
+  "date": "2025-07-09",
+  "category": "Threat Analysis",
+  "excerpt": "Comprehensive analysis of 6 sites reveals 0.0% malicious rate with 0 PowerShell attack attempts and 0 clipboard hijacking instances.",
+  "slug": "clickgrab-analysis-2025-07-09",
+  "tags": [
+    "URL Analysis",
+    "Threat Intelligence",
+    "Malicious Domains"
+  ],
+  "read_time": 12,
+  "stats": {
+    "sites_analyzed": 6,
+    "malicious_rate": 0,
+    "attack_patterns": 0,
+    "powershell_downloads": 0,
+    "clipboard_manipulations": 0,
+    "obfuscation_score": 0,
+    "attack_sophistication": 0
+  },
+  "analysis_data": {
+    "obfuscation_analysis": {},
+    "flow_analysis": {},
+    "keyword_analysis": {
+      "categories": {
+        "Technical Terms": [
+          "failed_to_retrieve"
+        ]
+      },
+      "similar_groups": [],
+      "frequency": [
+        [
+          "failed_to_retrieve",
+          6
+        ]
+      ],
+      "total_unique": 1,
+      "total_count": 6
+    },
+    "domain_counts": [],
+    "url_patterns": {
+      "reCAPTCHA imagery": {},
+      "Font resources": {},
+      "CDN hosted scripts": {},
+      "Google resources": {}
+    }
+  }
+}
