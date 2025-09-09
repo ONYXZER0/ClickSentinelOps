@@ -108,34 +108,34 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "CaptchaLoading",
-          "captcha-box",
-          "captcha-verify",
-          "CAPTCHA Verification",
-          "Verification ID",
+          "I am not a robot",
           "CaptchaListeners",
-          "Verify You Are Human",
-          "Robot",
+          "Verification ID",
+          "verification-id",
           "captcha-iogo",
-          "verification",
           "CAPTCHA",
           "Verification Hash",
-          "verification-id",
-          "captcha",
+          "CaptchaLoading",
+          "Verify You Are Human",
+          "To better prove you are not a robot",
           "robot",
-          "CAPTCHA-iogo",
+          "verification_id",
           "Verification",
           "CaptchaCheckbox",
-          "To better prove you are not a robot",
-          "I am not a robot",
-          "verification_id"
+          "captcha-verify",
+          "CAPTCHA-iogo",
+          "verification",
+          "CAPTCHA Verification",
+          "Robot",
+          "captcha-box",
+          "captcha"
         ],
         "System Commands": [
           "PowErsHeLL"
         ],
         "Verification Text": [
-          "hidden",
           "hiddEn",
+          "hidden",
           "Hidden"
         ],
         "Technical Terms": [
