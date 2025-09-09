@@ -50,8 +50,8 @@
           "count": 18,
           "description": "Adding elements to the DOM",
           "examples": [
-            "body.append",
-            "append("
+            "append(",
+            "body.append"
           ]
         },
         "Selection Methods": {
@@ -108,34 +108,34 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "I am not a robot",
-          "CaptchaListeners",
-          "Verification ID",
-          "verification-id",
-          "captcha-iogo",
-          "CAPTCHA",
-          "Verification Hash",
-          "CaptchaLoading",
-          "Verify You Are Human",
-          "To better prove you are not a robot",
           "robot",
-          "verification_id",
-          "Verification",
-          "CaptchaCheckbox",
-          "captcha-verify",
-          "CAPTCHA-iogo",
-          "verification",
+          "Verification ID",
           "CAPTCHA Verification",
-          "Robot",
+          "CaptchaLoading",
+          "Verification Hash",
+          "verification-id",
+          "verification_id",
+          "To better prove you are not a robot",
+          "captcha",
+          "CAPTCHA-iogo",
           "captcha-box",
-          "captcha"
+          "Verification",
+          "CAPTCHA",
+          "Robot",
+          "I am not a robot",
+          "Verify You Are Human",
+          "captcha-verify",
+          "captcha-iogo",
+          "CaptchaListeners",
+          "verification",
+          "CaptchaCheckbox"
         ],
         "System Commands": [
           "PowErsHeLL"
         ],
         "Verification Text": [
-          "hiddEn",
           "hidden",
+          "hiddEn",
           "Hidden"
         ],
         "Technical Terms": [
