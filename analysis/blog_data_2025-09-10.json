@@ -2,7 +2,7 @@
   "title": "High-Impact ClickGrab Campaign: Advanced Analysis of 2025-09-10 Attack Patterns",
   "date": "2025-09-10",
   "category": "Clipboard Hijacking Analysis",
-  "excerpt": "Comprehensive analysis of 11 sites reveals 54.5% malicious rate with 1 PowerShell attack attempts and 18 clipboard hijacking instances.",
+  "excerpt": "Comprehensive analysis of 10 sites reveals 60.0% malicious rate with 1 PowerShell attack attempts and 18 clipboard hijacking instances.",
   "slug": "clickgrab-analysis-2025-09-10",
   "tags": [
     "Clipboard Hijacking",
@@ -13,9 +13,9 @@
   ],
   "read_time": 12,
   "stats": {
-    "sites_analyzed": 11,
-    "malicious_rate": 55,
-    "attack_patterns": 42,
+    "sites_analyzed": 10,
+    "malicious_rate": 60,
+    "attack_patterns": 41,
     "powershell_downloads": 1,
     "clipboard_manipulations": 18,
     "obfuscation_score": 0,
@@ -108,26 +108,26 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "captcha",
-          "CaptchaListeners",
+          "CAPTCHA",
+          "Verification",
           "Verify You Are Human",
-          "verification",
-          "verification-id",
-          "I am not a robot",
-          "CaptchaLoading",
-          "To better prove you are not a robot",
           "Verification ID",
           "Verification Hash",
-          "robot",
-          "captcha-verify",
-          "verification_id",
-          "Verification",
-          "Robot",
-          "CAPTCHA",
-          "CAPTCHA Verification",
+          "CaptchaLoading",
+          "verification",
           "CAPTCHA-iogo",
-          "captcha-box",
+          "To better prove you are not a robot",
           "CaptchaCheckbox",
+          "verification-id",
+          "verification_id",
+          "CAPTCHA Verification",
+          "captcha",
+          "captcha-verify",
+          "CaptchaListeners",
+          "Robot",
+          "robot",
+          "captcha-box",
+          "I am not a robot",
           "captcha-iogo"
         ],
         "System Commands": [
@@ -135,8 +135,8 @@
         ],
         "Verification Text": [
           "hidden",
-          "hiddEn",
-          "Hidden"
+          "Hidden",
+          "hiddEn"
         ],
         "Technical Terms": [
           "iex",
@@ -276,10 +276,6 @@
         3
       ],
       [
-        "t.me",
-        2
-      ],
-      [
         "www.facebook.com",
         2
       ],
@@ -297,6 +293,10 @@
       ],
       [
         "irp.cdn-website.com",
+        1
+      ],
+      [
+        "t.me",
         1
       ]
     ],
