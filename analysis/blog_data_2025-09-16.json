@@ -43,16 +43,16 @@
           "count": 4,
           "description": "Injecting malicious content into elements",
           "examples": [
-            ".value =",
-            ".textContent ="
+            ".textContent =",
+            ".value ="
           ]
         },
         "DOM Manipulation": {
           "count": 9,
           "description": "Adding elements to the DOM",
           "examples": [
-            "body.append",
-            "append("
+            "append(",
+            "body.append"
           ]
         },
         "Selection Methods": {
@@ -109,18 +109,18 @@
     "keyword_analysis": {
       "categories": {
         "Social Engineering": [
-          "robot",
           "verification_id",
-          "I am not a robot",
-          "To better prove you are not a robot",
-          "Verification Hash",
-          "Verify You Are Human",
-          "verification-id",
-          "Robot",
-          "Verification ID",
-          "Verification",
           "verification",
-          "CAPTCHA Verification"
+          "verification-id",
+          "To better prove you are not a robot",
+          "Verify You Are Human",
+          "CAPTCHA Verification",
+          "robot",
+          "Verification ID",
+          "I am not a robot",
+          "Robot",
+          "Verification",
+          "Verification Hash"
         ],
         "Verification Text": [
           "Hidden",
