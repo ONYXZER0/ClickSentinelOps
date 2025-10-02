@@ -1,6 +1,6 @@
 {
   "gist_id": "9f563dfb78a06fad5db794f33ba93a3f",
-  "hash": "13443275a756c3a3c7bb1bbb3f32772bcfb707636be69c517901470c41dad32e",
+  "hash": "5fbb414ce7c34e2b39a6f448184888d1ca4b2f455ff3c9675cc661f79d37d1bc",
   "domains": [
     "evodigital.com.au",
     "creatorssky.com",
@@ -203,7 +203,11 @@
     "rootsems.com",
     "shop.stil.co.ug",
     "google-security-bypass-v-011002.pages.dev",
-    "google-security-bypass-v-011003.pages.dev"
+    "google-security-bypass-v-011003.pages.dev",
+    "google-security-bypass-v-011005.pages.dev",
+    "naasongs.ltd",
+    "google-security-bypass-v-021001.pages.dev",
+    "google-security-bypass-v-021002.pages.dev"
   ],
-  "cached_at": "2025-10-01T14:59:13.487174"
+  "cached_at": "2025-10-02T02:13:28.543332"
 }
