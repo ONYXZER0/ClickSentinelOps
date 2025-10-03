@@ -1,6 +1,6 @@
 {
   "gist_id": "9f563dfb78a06fad5db794f33ba93a3f",
-  "hash": "5fbb414ce7c34e2b39a6f448184888d1ca4b2f455ff3c9675cc661f79d37d1bc",
+  "hash": "71fe5cd92359cec896fa2399653729a6f28cb12b8fe5dd0a21f0acfa8aa2b3f3",
   "domains": [
     "evodigital.com.au",
     "creatorssky.com",
@@ -207,7 +207,12 @@
     "google-security-bypass-v-011005.pages.dev",
     "naasongs.ltd",
     "google-security-bypass-v-021001.pages.dev",
-    "google-security-bypass-v-021002.pages.dev"
+    "google-security-bypass-v-021002.pages.dev",
+    "rcecaptcha.contatosegura.com",
+    "vvsviden.dk",
+    "google-security-bypass-v-021003.pages.dev",
+    "google-security-bypass-v-021004.pages.dev",
+    "cuanasekali.xyz"
   ],
-  "cached_at": "2025-10-02T02:13:28.543332"
+  "cached_at": "2025-10-03T02:13:08.790550"
 }
